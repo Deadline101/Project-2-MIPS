@@ -29,7 +29,7 @@ _Loop:
 tangDem:
 	addi $t0,$t0,1
 	addi $s0,$s0,1
-	j Loop
+	j _Loop
 endLoop:
 	#Kiem tra so ky tu
 	li $a1,8
@@ -67,7 +67,6 @@ kTKyTu3:
 	beq $s2,1,nhapTen
 	addi $s0,$s0,1
 	j KyTuDB
-
 
 File:
 	#Mo file
@@ -122,6 +121,7 @@ layChu:
 	sb $a2,($s1)
 	addi $s1, $s1, 1
 	j layChu
+
 out:
 	li $v0,4
 	la $a0,chu
