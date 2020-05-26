@@ -59,6 +59,7 @@
 
 
 .text
+<<<<<<< HEAD
 
     # đã copy code và did understand these stuff
     lw $a0, numIncorrectGuesses
@@ -70,6 +71,64 @@
 	beq $a0, 6, printPic6
 	beq $a0, 7, printPic7
     jal outGame:
+=======
+    jal printPic1
+    syscall
+
+    outPic1:
+        la $a0, newline
+        li $v0, 4
+        syscall
+
+    jal printPic2
+    syscall
+
+    outPic2:
+        la $a0, newline
+        li $v0, 4
+        syscall
+
+    jal printPic3
+    syscall
+
+    outPic3:
+        la $a0, newline
+        li $v0, 4
+        syscall
+
+    jal printPic4
+    syscall
+
+    outPic4:
+        la $a0, newline
+        li $v0, 4
+        syscall
+
+    jal printPic5
+    syscall
+
+    outPic5:
+        la $a0, newline
+        li $v0, 4
+        syscall
+
+    jal printPic6
+    syscall
+
+    outPic6:
+        la $a0, newline
+        li $v0, 4
+        syscall
+
+    jal printPic7
+    syscall
+
+    outPic7:
+        la $a0, newline
+        li $v0, 4
+        syscall
+        j outGame
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic7:
         la $a0, pic71	# load pic vao $a0
@@ -93,7 +152,11 @@
         la $a0, pic77	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic7
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic6:
         la $a0, pic61	# load pic vao $a0
@@ -117,7 +180,11 @@
         la $a0, pic67	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic6
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic5:
         la $a0, pic51	# load pic vao $a0
@@ -141,7 +208,11 @@
         la $a0, pic57	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic5
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic4:
         la $a0, pic41	# load pic vao $a0
@@ -165,7 +236,11 @@
         la $a0, pic47	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic4
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic3:
         la $a0, pic31	# load pic vao $a0
@@ -189,7 +264,11 @@
         la $a0, pic37	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic3
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic2:
         la $a0, pic21	# load pic vao $a0
@@ -213,7 +292,11 @@
         la $a0, pic27	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic2
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
     printPic1:
         la $a0, pic11	# load pic vao $a0
@@ -237,6 +320,10 @@
         la $a0, pic17	# load pic vao $a0
         li $v0, 4	# in ra man hinh pic
         syscall
+<<<<<<< HEAD
         j outGame
+=======
+        j outPic1
+>>>>>>> e5a1416757c70c05b04cb6ea103a818ec21f54ca
 
 outGame:
