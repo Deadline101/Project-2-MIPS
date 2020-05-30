@@ -138,9 +138,6 @@ PlayGame:
 	beq $s0,2,out
 	#Show quesMess 
 nextLevel:
-	li $v0,4#for test
-	la $a0,question#for test
-	syscall#for test
 	#show quesMess
 	la $a0,quesMess
 	li $v0,4
@@ -463,12 +460,6 @@ NextStage:
 	
 	
 NewNextStage:
-	lw $a0,point
-	li $v0,1
-	syscall
-	lw $a0,stage
-	li $v0,1
-	syscall
 	li $s5,0
 	li $t4,0
 	li $t3,0
@@ -893,9 +884,6 @@ standardized:
 	add $a1,$a1,1
 	sb $s4,0($a1)
 
-	la $a0,writeStage
-	li $v0,4
-	syscall
 	#//////////////////
 	li $a0,0
 	la $a0,writePoint
@@ -917,9 +905,6 @@ standardized:
 	add $a0,$a0,1
 	sb $s4,0($a0)
 	la $a0,dash
-	li $v0,4
-	syscall
-	la $a0,writePoint
 	li $v0,4
 	syscall
 	#-----------------
