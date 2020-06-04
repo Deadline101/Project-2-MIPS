@@ -320,7 +320,7 @@ setSeed:
 random: 
 	#random mot dau * trong file
 	li $v0,42
-	li $a1, 2
+	li $a1, 989
 	syscall
 	beq $a0,$0,random	
 	move $a1,$a0
