@@ -320,7 +320,7 @@ setSeed:
 random: 
 	#random mot dau * trong file
 	li $v0,42
-	li $a1, 989
+	li $a1, 2
 	syscall
 	beq $a0,$0,random	
 	move $a1,$a0
@@ -447,6 +447,10 @@ checkIfWin:
 	j searchInputedChar
    #hi
 NextStage:
+	li $v0, 4
+	la $a0, congratulationMess
+	syscall
+	
 	lb $a3,point
 	add $a3,$a3,$s5   
 	add $a3,$a3,-1
@@ -772,11 +776,11 @@ output:
   jr $ra
   ###############################################################
 playOrNot:
-	# Xu?t tÃªn ng??i ch?i_?i?m_S? l??t ra mÃ n hÃ¬nh Name,point,stage
-	# L?u vÃ o nguoichoi.txt	.
+	# Xu?t tên ng??i ch?i_?i?m_S? l??t ra màn hình Name,point,stage
+	# L?u vào nguoichoi.txt	.
 	#Xu?t ra 10 ng??i ?i?m cao nh?t
 	#xu?t ra l?u ch?n ti?p t?c hay d?ng 
-	#ti?p t?c thÃ¬ k ph?i l?u tÃªn ng??i ch?i nh?ng reset ?i?m vÃ  mÃ n
+	#ti?p t?c thì k ph?i l?u tên ng??i ch?i nh?ng reset ?i?m và màn
 	li $s0,'\n'
 	li $s2,'\0'
 	li $s1,0
@@ -1112,4 +1116,3 @@ out:
 	la $a0,EndMess
 	li $v0,4
 	syscall
-	
