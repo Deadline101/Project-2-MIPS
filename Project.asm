@@ -772,11 +772,11 @@ output:
   jr $ra
   ###############################################################
 playOrNot:
-	# Xu?t tên ng??i ch?i_?i?m_S? l??t ra màn hình Name,point,stage
-	# L?u vào nguoichoi.txt	.
+	# Xu?t tÃªn ng??i ch?i_?i?m_S? l??t ra mÃ n hÃ¬nh Name,point,stage
+	# L?u vÃ o nguoichoi.txt	.
 	#Xu?t ra 10 ng??i ?i?m cao nh?t
 	#xu?t ra l?u ch?n ti?p t?c hay d?ng 
-	#ti?p t?c thì k ph?i l?u tên ng??i ch?i nh?ng reset ?i?m và màn
+	#ti?p t?c thÃ¬ k ph?i l?u tÃªn ng??i ch?i nh?ng reset ?i?m vÃ  mÃ n
 	li $s0,'\n'
 	li $s2,'\0'
 	li $s1,0
@@ -923,6 +923,7 @@ storeNameToname:
 	lbu $t4,Name($s0)
 	sb $t4,0($t2)
 	beq $t4,$s2,add5Space
+	beq $t4,$s3,add5Space
 	add $s0,$s0,1
 	add $t2,$t2,1
 	j storeNameToname
